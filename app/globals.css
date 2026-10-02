@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@theme {
+  --color-ink: #17171c;
+  --color-ink-hover: #2e2e38;
+  --color-label: #2a2a33;
+  --color-body: #52525c;
+  --color-muted: #6b6b76;
+  --color-placeholder: #8b8b96;
+  --color-disabled: #8e8e99;
+  --color-canvas: #f6f6f8;
+
+  --color-line: #e1e1e7;
+  --color-line-strong: #c6c6d0;
+  --color-line-soft: #ebebef;
+  --color-line-faint: #f0f0f3;
+
+  --color-fill: #f2f2f5;
+  --color-fill-subtle: #f7f7f9;
+  --color-fill-faint: #fafafb;
+  --color-fill-disabled: #f4f4f6;
+  --color-fill-muted: #ececf0;
+
+  --color-accent: #3553e0;
+  --color-accent-hover: #2a43b8;
+  --color-danger: #c22f28;
+  --color-warning: #b45309;
+  --color-good: #4d7c0f;
+  --color-success: #237a4b;
+
+  --shadow-control: 0 1px 2px rgb(16 16 24 / 0.04);
+  --shadow-button: inset 0 1px 0 rgb(255 255 255 / 0.14), 0 1px 2px rgb(16 16 24 / 0.24),
+    0 6px 16px -6px rgb(16 16 24 / 0.35);
+  --shadow-card: 0 1px 2px rgb(16 16 24 / 0.04), 0 12px 32px -8px rgb(16 16 24 / 0.08),
+    0 40px 80px -32px rgb(16 16 24 / 0.14);
+  --shadow-sheet: 0 -16px 40px -20px rgb(16 16 24 / 0.16);
+  --shadow-popover: 0 1px 2px rgb(16 16 24 / 0.04), 0 12px 32px -8px rgb(16 16 24 / 0.16);
+  --shadow-logo: inset 0 1px 0 rgb(255 255 255 / 0.16), 0 8px 20px -8px rgb(16 16 24 / 0.5);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-canvas);
+  }
+}
+
+@layer components {
+  .auth-backdrop {
+    background:
+      radial-gradient(520px 420px at 0% -8%, #e1e7fe 0%, rgb(225 231 254 / 0) 70%),
+      radial-gradient(420px 360px at 100% 10%, #ede6fc 0%, rgb(237 230 252 / 0) 68%),
+      var(--color-canvas);
+  }
+
+  .hero-wash {
+    background:
+      radial-gradient(640px 320px at 0% 0%, #e1e7fe 0%, rgb(225 231 254 / 0) 70%),
+      radial-gradient(520px 300px at 100% 100%, #ede6fc 0%, rgb(237 230 252 / 0) 70%),
+      #ffffff;
+  }
+
+  @media (width >= 40rem) {
+    .auth-backdrop {
+      background:
+        radial-gradient(900px 560px at 12% -12%, #e1e7fe 0%, rgb(225 231 254 / 0) 65%),
+        radial-gradient(820px 600px at 96% 112%, #ede6fc 0%, rgb(237 230 252 / 0) 62%),
+        var(--color-canvas);
+    }
+  }
+}
