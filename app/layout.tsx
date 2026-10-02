@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Authentication System",
-  description: "Authentication System",
+  description: "Authentication System.   ..",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
